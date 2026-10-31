@@ -21,7 +21,7 @@ INPUT=${INPUT:-data/example_prompts.jsonl}
 OUTPUT=${OUTPUT:-outputs/responses.jsonl}
 WORKERS=${WORKERS:-32}
 
-# Starts vLLM (MODEL, PORT, HF_HOME are configured there) and sets VLLM_PID, LLM_BASE_URL, LLM_MODEL.
+# Starts vLLM (MODEL and PORT are configured there) and sets VLLM_PID, LLM_BASE_URL, LLM_MODEL.
 source scripts/serve_vllm.sh
 trap 'kill $VLLM_PID 2>/dev/null' EXIT
 

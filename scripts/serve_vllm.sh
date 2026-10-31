@@ -9,12 +9,11 @@
 #
 # No `set -e` here: in a sourced script it would close your interactive shell on any error.
 
-MODEL=${MODEL:-Qwen/Qwen2.5-7B-Instruct}
+MODEL=${MODEL:-HuggingFaceTB/SmolLM2-135M-Instruct}
 PORT=${PORT:-8000}
 VLLM_LOG=${VLLM_LOG:-logs/vllm-${SLURM_JOB_ID:-local}.log}
 
-# Model weights are large; keep the Hugging Face cache on scratch rather than $HOME.
-# export HF_HOME=/path/to/scratch/hf_cache
+# HF_HOME and UV_CACHE_DIR should point to scratch (set in ~/.bashrc; see README "One-time setup").
 
 mkdir -p "$(dirname "$VLLM_LOG")"
 
