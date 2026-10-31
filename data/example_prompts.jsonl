@@ -1,0 +1,3 @@
+{"id": "q1", "prompt": "Write a short customer review of a coffee maker."}
+{"id": "q2", "prompt": "Write a short customer review of a pair of running shoes.", "system": "You write realistic, concise product reviews. Output only the review text."}
+{"id": "q3", "prompt": "Generate a grade-school math word problem and its answer, as JSON with keys \"question\" and \"answer\"."}
